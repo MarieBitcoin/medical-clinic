@@ -1195,9 +1195,12 @@ textarea.is-invalid {
 .th-menu-wrapper .mobile-logo {
   padding-bottom: 30px;
   padding-top: 40px;
+  padding-left: 20px;
   display: block;
   text-align: center;
   background-color: var(--smoke-color2);
+  width: 190px;
+  height: 70px;
 }
 
 .th-menu-wrapper .mobile-logo svg {
@@ -4788,6 +4791,8 @@ ol.wp-block-rss {
 
 .about-logo {
   margin-bottom: 15px;
+  width: 250px;
+  height: 70px;
 }
 
 .th-widget-about {
@@ -5200,6 +5205,8 @@ ol.wp-block-rss {
 .header-logo {
   padding-top: 15px;
   padding-bottom: 15px;
+  width: 210px;
+  height: auto;
 }
 
 .header-links ul {
