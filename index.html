@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Mediax - Health & Medical HTML Template - Medical Shop</title>
-    <meta name="author" content="Mediax" />
+    <title>PharmTech - Health & Medical HTML Template - Medical Shop</title>
+    <meta name="author" content="PharmTech" />
     <meta
       name="description"
-      content="Mediax - Health & Medical HTML Template"
+      content="PharmTech - Health & Medical HTML Template"
     />
-    <meta name="keywords" content="Mediax - Health & Medical HTML Template" />
+    <meta name="keywords" content="PharmTech - Health & Medical HTML Template" />
     <meta name="robots" content="INDEX,FOLLOW" />
 
     <!-- Mobile Specific Metas -->
@@ -240,123 +240,67 @@ Product Lightbox
     <!--==============================
     Sidemenu
 ============================== -->
-    <div class="sidemenu-wrapper sidemenu-cart">
-      <div class="sidemenu-content">
-        <button class="closeButton sideMenuCls">
-          <i class="far fa-times"></i>
-        </button>
+   <div class="sidemenu-wrapper sidemenu-cart">
+    <div class="sidemenu-content">
+        <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
         <div class="widget woocommerce widget_shopping_cart">
-          <h3 class="widget_title">Shopping cart</h3>
-          <div class="widget_shopping_cart_content">
-            <ul class="woocommerce-mini-cart cart_list product_list_widget">
-              <li class="woocommerce-mini-cart-item mini_cart_item">
-                <a href="#" class="remove remove_from_cart_button"
-                  ><i class="far fa-times"></i
-                ></a>
-                <a href="#"
-                  ><img
-                    src="assets/img/product/product_thumb_1_1.jpg"
-                    alt="Cart Image"
-                  />Surgery Hands Gloves</a
-                >
-                <span class="quantity"
-                  >1 ×
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span
-                    >940.00</span
-                  >
-                </span>
-              </li>
-              <li class="woocommerce-mini-cart-item mini_cart_item">
-                <a href="#" class="remove remove_from_cart_button"
-                  ><i class="far fa-times"></i
-                ></a>
-                <a href="#"
-                  ><img
-                    src="assets/img/product/product_thumb_1_2.jpg"
-                    alt="Cart Image"
-                  />D-Ribose Drug Medicine</a
-                >
-                <span class="quantity"
-                  >1 ×
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span
-                    >899.00</span
-                  >
-                </span>
-              </li>
-              <li class="woocommerce-mini-cart-item mini_cart_item">
-                <a href="#" class="remove remove_from_cart_button"
-                  ><i class="far fa-times"></i
-                ></a>
-                <a href="#"
-                  ><img
-                    src="assets/img/product/product_thumb_1_3.jpg"
-                    alt="Cart Image"
-                  />CAD Dentistry Prosthesis</a
-                >
-                <span class="quantity"
-                  >1 ×
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span
-                    >756.00</span
-                  >
-                </span>
-              </li>
-              <li class="woocommerce-mini-cart-item mini_cart_item">
-                <a href="#" class="remove remove_from_cart_button"
-                  ><i class="far fa-times"></i
-                ></a>
-                <a href="#"
-                  ><img
-                    src="assets/img/product/product_thumb_1_4.jpg"
-                    alt="Cart Image"
-                  />Surgery Safety Mask</a
-                >
-                <span class="quantity"
-                  >1 ×
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span
-                    >723.00</span
-                  >
-                </span>
-              </li>
-              <li class="woocommerce-mini-cart-item mini_cart_item">
-                <a href="#" class="remove remove_from_cart_button"
-                  ><i class="far fa-times"></i
-                ></a>
-                <a href="#"
-                  ><img
-                    src="assets/img/product/product_thumb_1_5.jpg"
-                    alt="Cart Image"
-                  />Infrared Thermometers</a
-                >
-                <span class="quantity"
-                  >1 ×
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span
-                    >1080.00</span
-                  >
-                </span>
-              </li>
-            </ul>
-            <p class="woocommerce-mini-cart__total total">
-              <strong>Subtotal:</strong>
-              <span class="woocommerce-Price-amount amount">
-                <span class="woocommerce-Price-currencySymbol">$</span
-                >4398.00</span
-              >
-            </p>
-            <p class="woocommerce-mini-cart__buttons buttons">
-              <a href="cart.html" class="th-btn wc-forward">View cart</a>
-              <a href="checkout.html" class="th-btn checkout wc-forward"
-                >Checkout</a
-              >
-            </p>
-          </div>
+            <h3 class="widget_title">Shopping cart</h3>
+            <div class="widget_shopping_cart_content">
+                <ul class="woocommerce-mini-cart cart_list product_list_widget" id="mini-cart-list">
+                    <li class="woocommerce-mini-cart-item mini_cart_item">
+                        <a href="#" class="remove remove_from_cart_button" data-product-id="1"><i class="far fa-times"></i></a>
+                        <a href="#"><img src="assets/img/product/product_thumb_1_1.jpg" alt="Cart Image">Surgery Hands Gloves</a>
+                        <span class="quantity">1 ×
+                            <span class="woocommerce-Price-amount amount" data-price="940.00">
+                                <span class="woocommerce-Price-currencySymbol">$</span>940.00</span>
+                        </span>
+                    </li>
+                    <li class="woocommerce-mini-cart-item mini_cart_item">
+                        <a href="#" class="remove remove_from_cart_button" data-product-id="2"><i class="far fa-times"></i></a>
+                        <a href="#"><img src="assets/img/product/product_thumb_1_2.jpg" alt="Cart Image">D-Ribose Drug Medicine</a>
+                        <span class="quantity">1 ×
+                            <span class="woocommerce-Price-amount amount" data-price="899.00">
+                                <span class="woocommerce-Price-currencySymbol">$</span>899.00</span>
+                        </span>
+                    </li>
+                    <li class="woocommerce-mini-cart-item mini_cart_item">
+                        <a href="#" class="remove remove_from_cart_button" data-product-id="3"><i class="far fa-times"></i></a>
+                        <a href="#"><img src="assets/img/product/product_thumb_1_3.jpg" alt="Cart Image">CAD Dentistry Prosthesis</a>
+                        <span class="quantity">1 ×
+                            <span class="woocommerce-Price-amount amount" data-price="756.00">
+                                <span class="woocommerce-Price-currencySymbol">$</span>756.00</span>
+                        </span>
+                    </li>
+                    <li class="woocommerce-mini-cart-item mini_cart_item">
+                        <a href="#" class="remove remove_from_cart_button" data-product-id="4"><i class="far fa-times"></i></a>
+                        <a href="#"><img src="assets/img/product/product_thumb_1_4.jpg" alt="Cart Image">Surgery Safety Mask</a>
+                        <span class="quantity">1 ×
+                            <span class="woocommerce-Price-amount amount" data-price="723.00">
+                                <span class="woocommerce-Price-currencySymbol">$</span>723.00</span>
+                        </span>
+                    </li>
+                    <li class="woocommerce-mini-cart-item mini_cart_item">
+                        <a href="#" class="remove remove_from_cart_button" data-product-id="5"><i class="far fa-times"></i></a>
+                        <a href="#"><img src="assets/img/product/product_thumb_1_5.jpg" alt="Cart Image">Infrared Thermometers</a>
+                        <span class="quantity">1 ×
+                            <span class="woocommerce-Price-amount amount" data-price="1080.00">
+                                <span class="woocommerce-Price-currencySymbol">$</span>1080.00</span>
+                        </span>
+                    </li>
+                </ul>
+                <p class="woocommerce-mini-cart__total total">
+                    <strong>Subtotal:</strong>
+                    <span class="woocommerce-Price-amount amount" id="cart-total">
+                        <span class="woocommerce-Price-currencySymbol">$</span>4398.00</span>
+                </p>
+                <p class="woocommerce-mini-cart__buttons buttons">
+                    <a href="cart.html" class="th-btn wc-forward">View cart</a>
+                    <a href="checkout.html" class="th-btn checkout wc-forward">Checkout</a>
+                </p>
+            </div>
         </div>
-      </div>
     </div>
+</div>
     <!--==============================
     Sidemenu
 ============================== -->
@@ -369,7 +313,7 @@ Product Lightbox
           <div class="th-widget-about">
             <div class="about-logo">
               <a href="/"
-                ><img src="assets/img/logo.png" alt="Mediax"
+                ><img src="assets/img/logo.png" alt="PharmTech"
               /></a>
             </div>
             <p class="about-text">
@@ -382,8 +326,8 @@ Product Lightbox
             </p>
             <p class="footer-info">
               <i class="fal fa-envelope"></i>
-              <a href="mailto:info@mediax.com" class="info-box_link"
-                >info@mediax.com</a
+              <a href="mailto:info@PharmTech.com" class="info-box_link"
+                >info@PharmTech.com</a
               >
             </p>
             <p class="footer-info">
@@ -458,7 +402,7 @@ Product Lightbox
         <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
           <a href="/"
-            ><img src="assets/img/logo.png" alt="Mediax"
+            ><img src="assets/img/logo.png" alt="PharmTech"
           /></a>
         </div>
         <div class="th-mobile-menu">
@@ -506,7 +450,7 @@ Product Lightbox
                   </ul>
                 </li>
                 <li><a href="team.html">Team</a></li>
-                <!-- <li><a href="team-details.html">Team Details</a></li> -->
+                <!--     -->
                 <li><a href="appointment.html">Appointments</a></li>
                 <li><a href="faq.html">Faq Page</a></li>
                 <li><a href="pricing.html">Pricing Plan</a></li>
@@ -516,7 +460,7 @@ Product Lightbox
             <!-- <li class="menu-item-has-children">
               <a href="#">Blog</a>
               <ul class="sub-menu">
-                <li><a href="blog.html">Blog</a></li>
+                    
                 <li><a href="blog-details.html">Blog Details</a></li>
               </ul>
             </li> -->
@@ -539,7 +483,7 @@ Product Lightbox
             <div class="col-auto d-none d-lg-block">
               <div class="header-logo">
                 <a href="/"
-                  ><img src="assets/img/logo.png" alt="Mediax"
+                  ><img src="assets/img/logo.png" alt="PharmTech"
                 /></a>
               </div>
             </div>
@@ -642,7 +586,7 @@ Product Lightbox
                           </ul>
                         </li>
                         <li><a href="team.html">Team</a></li>
-                        <!-- <li><a href="team-details.html">Team Details</a></li> -->
+                        <!--     -->
                         <li><a href="appointment.html">Appointments</a></li>
                         <li><a href="faq.html">Faq Page</a></li>
                         <li><a href="pricing.html">Pricing Plan</a></li>
@@ -652,7 +596,7 @@ Product Lightbox
                     <!-- <li class="menu-item-has-children">
                       <a href="#">Blog</a>
                       <ul class="sub-menu">
-                        <li><a href="blog.html">Blog</a></li>
+                            
                         <li><a href="blog-details.html">Blog Details</a></li>
                       </ul>
                     </li> -->
@@ -665,7 +609,7 @@ Product Lightbox
               <div class="col-auto d-inline-block d-lg-none">
                 <div class="header-logo">
                   <a href="/"
-                    ><img src="assets/img/logo-white.svg" alt="Mediax"
+                    ><img src="assets/img/logo-white.png" alt="PharmTech"
                   /></a>
                 </div>
               </div>
@@ -2721,7 +2665,7 @@ Blog Area
               </div>
               <div class="blog-content">
                 <div class="blog-meta">
-                  <a href="blog.html"><i class="fal fa-user"></i>By Mediax</a>
+                  <a href="blog.html"><i class="fal fa-user"></i>By PharmTech</a>
                   <a href="blog.html"
                     ><i class="fal fa-calendar"></i>15 March, 2024</a
                   >
@@ -2743,7 +2687,7 @@ Blog Area
               </div>
               <div class="blog-content">
                 <div class="blog-meta">
-                  <a href="blog.html"><i class="fal fa-user"></i>By Mediax</a>
+                  <a href="blog.html"><i class="fal fa-user"></i>By PharmTech</a>
                   <a href="blog.html"
                     ><i class="fal fa-calendar"></i>16 March, 2024</a
                   >
@@ -2765,7 +2709,7 @@ Blog Area
               </div>
               <div class="blog-content">
                 <div class="blog-meta">
-                  <a href="blog.html"><i class="fal fa-user"></i>By Mediax</a>
+                  <a href="blog.html"><i class="fal fa-user"></i>By PharmTech</a>
                   <a href="blog.html"
                     ><i class="fal fa-calendar"></i>17 March, 2024</a
                   >
@@ -2805,8 +2749,8 @@ Blog Area
                   </p>
                   <p class="footer-info">
                     <i class="fal fa-envelope"></i>
-                    <a href="mailto:info@mediax.com" class="info-box_link"
-                      >info@mediax.com</a
+                    <a href="mailto:info@PharmTech.com" class="info-box_link"
+                      >info@PharmTech.com</a
                     >
                   </p>
                   <p class="footer-info">
@@ -2841,7 +2785,7 @@ Blog Area
                     <li><a href="about.html">Terms of Use</a></li>
                     <li><a href="service.html">Our Services</a></li>
                     <li><a href="faq.html">Help & FAQs</a></li>
-                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                    <!--      -->
                     <li><a href="about.html">Privacy policy</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                   </ul>
@@ -2912,7 +2856,7 @@ Blog Area
             <div class="col-md-7">
               <p class="copyright-text">
                 Copyright <i class="fal fa-copyright"></i> 2025
-                <a href="/">Mediax</a>. All Rights
+                <a href="/">PharmTech</a>. All Rights
                 Reserved.
               </p>
             </div>
@@ -2970,7 +2914,49 @@ Blog Area
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
 
-    <!-- Main Js File -->
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Calculate initial total
+    updateCartTotal();
+    
+    // Add event listeners to all remove buttons
+    document.querySelectorAll('.remove_from_cart_button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productId = this.getAttribute('data-product-id');
+            removeProduct(productId);
+        });
+    });
+    
+    // Function to remove a product from the cart
+    function removeProduct(productId) {
+        const productElement = document.querySelector(`.remove_from_cart_button[data-product-id="${productId}"]`).closest('.mini_cart_item');
+        if (productElement) {
+            productElement.remove();
+            updateCartTotal();
+            updateCartCount();
+        }
+    }
+    
+    // Function to update the cart total
+    function updateCartTotal() {
+        let total = 0;
+        document.querySelectorAll('.woocommerce-mini-cart-item .woocommerce-Price-amount.amount').forEach(priceElement => {
+            const price = parseFloat(priceElement.getAttribute('data-price'));
+            const quantity = parseInt(priceElement.closest('.quantity').textContent.match(/\d+/)[0]);
+            total += price * quantity;
+        });
+        
+        document.getElementById('cart-total').innerHTML = `<span class="woocommerce-Price-currencySymbol">$</span>${total.toFixed(2)}`;
+    }
+    
+    // Function to update the cart count in the header
+    function updateCartCount() {
+        const itemCount = document.querySelectorAll('.woocommerce-mini-cart-item').length;
+        document.querySelector('.sideMenuCart .badge').textContent = itemCount;
+    }
+});
+</script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

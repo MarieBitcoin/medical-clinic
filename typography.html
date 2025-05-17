@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Mediax - Health & Medical HTML Template - Home One</title>
-    <meta name="author" content="Mediax">
-    <meta name="description" content="Mediax - Health & Medical HTML Template">
-    <meta name="keywords" content="Mediax - Health & Medical HTML Template">
+    <title>PharmTech - Health & Medical HTML Template - Home One</title>
+    <meta name="author" content="PharmTech">
+    <meta name="description" content="PharmTech - Health & Medical HTML Template">
+    <meta name="keywords" content="PharmTech - Health & Medical HTML Template">
     <meta name="robots" content="INDEX,FOLLOW">
 
     <!-- Mobile Specific Metas -->
@@ -324,7 +324,7 @@
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
-                                    <a href="/"><img src="assets/img/logo-footer.svg" alt="Mediax"></a>
+                                    <a href="/"><img src="assets/img/logo-white.png" alt="PharmTech"></a>
                                 </div>
                                 <p class="about-text">Subscribe to out newsletter today to receive latest news administrate cost effective for tactical data.</p>
                                 <p class="footer-info">
@@ -333,7 +333,7 @@
                                 </p>
                                 <p class="footer-info">
                                     <i class="fal fa-envelope"></i>
-                                    <a href="mailto:info@mediax.com" class="info-box_link">info@mediax.com</a>
+                                    <a href="mailto:info@PharmTech.com" class="info-box_link">info@PharmTech.com</a>
                                 </p>
                                 <p class="footer-info">
                                     <i class="fal fa-phone"></i>
@@ -351,7 +351,7 @@
                                     <li><a href="about.html">Terms of Use</a></li>
                                     <li><a href="service.html">Our Services</a></li>
                                     <li><a href="faq.html">Help & FAQs</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
+                                        
                                     <li><a href="about.html">Privacy policy</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
@@ -410,7 +410,7 @@
             <div class="container">
                 <div class="row gy-2 align-items-center">
                     <div class="col-md-7">
-                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="/">Mediax</a>. All Rights Reserved.</p>
+                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="/">PharmTech</a>. All Rights Reserved.</p>
                     </div>
                     <div class="col-md-5 text-center text-md-end">
                         <div class="th-social">
@@ -457,7 +457,49 @@
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
 
-    <!-- Main Js File -->
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Calculate initial total
+    updateCartTotal();
+    
+    // Add event listeners to all remove buttons
+    document.querySelectorAll('.remove_from_cart_button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productId = this.getAttribute('data-product-id');
+            removeProduct(productId);
+        });
+    });
+    
+    // Function to remove a product from the cart
+    function removeProduct(productId) {
+        const productElement = document.querySelector(`.remove_from_cart_button[data-product-id="${productId}"]`).closest('.mini_cart_item');
+        if (productElement) {
+            productElement.remove();
+            updateCartTotal();
+            updateCartCount();
+        }
+    }
+    
+    // Function to update the cart total
+    function updateCartTotal() {
+        let total = 0;
+        document.querySelectorAll('.woocommerce-mini-cart-item .woocommerce-Price-amount.amount').forEach(priceElement => {
+            const price = parseFloat(priceElement.getAttribute('data-price'));
+            const quantity = parseInt(priceElement.closest('.quantity').textContent.match(/\d+/)[0]);
+            total += price * quantity;
+        });
+        
+        document.getElementById('cart-total').innerHTML = `<span class="woocommerce-Price-currencySymbol">$</span>${total.toFixed(2)}`;
+    }
+    
+    // Function to update the cart count in the header
+    function updateCartCount() {
+        const itemCount = document.querySelectorAll('.woocommerce-mini-cart-item').length;
+        document.querySelector('.sideMenuCart .badge').textContent = itemCount;
+    }
+});
+</script>
     <script src="assets/js/main.js"></script>
 </body>
 
