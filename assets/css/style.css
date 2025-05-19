@@ -5412,6 +5412,10 @@ ol.wp-block-rss {
     padding: 15px 50px 15px 0;
     height: 90px;
   }
+  .header-logo{
+    width: 180px;
+  height: auto;
+  }
 }
 
 /* Extra small devices */
@@ -5428,6 +5432,10 @@ ol.wp-block-rss {
   }
   .header-layout1 .header-logo img {
     max-width: 150px;
+  }
+  .header-logo{
+    width: 180px;
+  height: auto;
   }
 }
 
